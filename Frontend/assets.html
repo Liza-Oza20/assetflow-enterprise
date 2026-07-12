@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetFlow - Manage Assets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h1>AssetFlow</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="assets.html">Assets</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="assets-section">
+
+    <h2>Asset Management</h2>
+
+    <div class="asset-form">
+
+        <input type="text" placeholder="Asset ID">
+
+        <input type="text" placeholder="Asset Name">
+
+        <select>
+            <option>Select Category</option>
+            <option>Laptop</option>
+            <option>Desktop</option>
+            <option>Printer</option>
+            <option>Projector</option>
+            <option>Furniture</option>
+            <option>Other</option>
+        </select>
+
+        <input type="text" placeholder="Assigned To">
+
+        <input type="date">
+
+        <button class="btn">Add Asset</button>
+
+    </div>
+
+    <h2>Asset List</h2>
+
+    <table>
+
+        <tr>
+            <th>Asset ID</th>
+            <th>Asset Name</th>
+            <th>Category</th>
+            <th>Assigned To</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>A001</td>
+            <td>Dell Laptop</td>
+            <td>Laptop</td>
+            <td>John</td>
+            <td>Assigned</td>
+        </tr>
+
+        <tr>
+            <td>A002</td>
+            <td>HP Printer</td>
+            <td>Printer</td>
+            <td>IT Department</td>
+            <td>Available</td>
+        </tr>
+
+        <tr>
+            <td>A003</td>
+            <td>Projector</td>
+            <td>Projector</td>
+            <td>Conference Room</td>
+            <td>In Use</td>
+        </tr>
+
+    </table>
+
+</section>
+
+</body>
+</html>

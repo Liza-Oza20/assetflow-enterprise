@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetFlow - Resource Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h1>AssetFlow</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="assets.html">Assets</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="resources-section">
+
+    <h2>Resource Management</h2>
+
+    <div class="resource-form">
+
+        <input type="text" placeholder="Resource ID">
+
+        <input type="text" placeholder="Resource Name">
+
+        <select>
+            <option>Select Type</option>
+            <option>Employee</option>
+            <option>Department</option>
+            <option>Meeting Room</option>
+            <option>Vehicle</option>
+            <option>Equipment</option>
+        </select>
+
+        <input type="text" placeholder="Assigned Department">
+
+        <button class="btn">Add Resource</button>
+
+    </div>
+
+    <h2>Resource List</h2>
+
+    <table>
+
+        <tr>
+            <th>Resource ID</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Department</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>R001</td>
+            <td>John Smith</td>
+            <td>Employee</td>
+            <td>IT</td>
+            <td>Available</td>
+        </tr>
+
+        <tr>
+            <td>R002</td>
+            <td>Conference Room A</td>
+            <td>Meeting Room</td>
+            <td>Administration</td>
+            <td>Booked</td>
+        </tr>
+
+        <tr>
+            <td>R003</td>
+            <td>Company Van</td>
+            <td>Vehicle</td>
+            <td>Logistics</td>
+            <td>Available</td>
+        </tr>
+
+    </table>
+
+</section>
+
+</body>
+</html>
