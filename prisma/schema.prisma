@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// SQLite has no native enum support, so Role and Status are plain Strings.
+// Allowed values are enforced in application code (see src/lib/constants.ts).
+//
+// Role:   "EMPLOYEE" | "DEPT_HEAD" | "ASSET_MANAGER" | "ADMIN"
+// Status: "ACTIVE" | "INACTIVE"
+
+model User {
+  id           String @id @default(cuid())
+  name         String
+  email        String @unique
+  passwordHash String
+  role         String @default("EMPLOYEE") // Role: EMPLOYEE | DEPT_HEAD | ASSET_MANAGER | ADMIN
+
+  departmentId String?
+  department   Department? @relation("DepartmentUsers", fields: [departmentId], references: [id])
+
+  status    String   @default("ACTIVE") // Status: ACTIVE | INACTIVE
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // A user may be the head of one department
+  headOfDepartment Department? @relation("DepartmentHead")
+}
+
+model Department {
+  id   String @id @default(cuid())
+  name String
+
+  headId String? @unique
+  head   User?   @relation("DepartmentHead", fields: [headId], references: [id])
+
+  parentDepartmentId String?
+  parentDepartment   Department?  @relation("DepartmentHierarchy", fields: [parentDepartmentId], references: [id])
+  childDepartments   Department[] @relation("DepartmentHierarchy")
+
+  users User[] @relation("DepartmentUsers")
+
+  status    String   @default("ACTIVE") // Status: ACTIVE | INACTIVE
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AssetCategory {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  createdAt DateTime @default(now())
+}
