@@ -51,11 +51,10 @@ FUTURE ENHANCEMENTS
 2 . AI-based Asset Prediction
 3 . Advanced reporting Dashbord
 
-LICENSE .
+LICENSE
 
---> GITHUB link : https://github.com/Liza-Oza20/assetflow-enterprise
---> PROJECT LINK : https://assetflow-by-glsr.netlify.app/
-
+- **GitHub:** https://github.com/Liza-Oza20/assetflow-enterprise
+- **Project Link:** https://assetflow-by-glsr.netlify.app/
 
 
 
