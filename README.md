@@ -24,11 +24,11 @@ assetflow-enterprise/
 - HTML
 - CSS
 - JavaScript
-- React (if used)
+  
 
 ### Backend
 - Java
-- Spring Boot (if used)
+  
 
 ### Database
 - MySQL
